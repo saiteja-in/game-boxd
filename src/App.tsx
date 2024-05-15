@@ -9,12 +9,17 @@ const App = () => {
     <Grid templateAreas={{
       base:`"header " " main"`,
       lg:`"header header" "aside main"`
-    }}>
+    }}
+    templateColumns={{
+      base:'1fr',
+      lg:'200px 1fr'
+    }}
+    >
       <GridItem area={"header"}>
         <NavBar />
       </GridItem>
       <Show above='lg'>
-      <GridItem pl="5"  area={"aside"}>
+      <GridItem pl="5"  area={"aside"} paddingX='5'>
         <GenreList />
       </GridItem>
       </Show>
