@@ -1,12 +1,13 @@
 import { HStack, Image, Text } from '@chakra-ui/react'
 import logo from '../assets/Logo/logo.webp'
 import React from 'react'
+import SwitchForDarkMode from './SwitchForDarkMode'
 
 const NavBar = () => {
   return (
-    <HStack>
+    <HStack justifyContent={'space-between'}>
         <Image boxSize='50px' src={logo}></Image>
-        <Text>navbar</Text>
+        <SwitchForDarkMode />
     </HStack>
   )
 }
